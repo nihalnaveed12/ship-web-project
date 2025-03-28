@@ -35,7 +35,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white text-black fixed z-20 top-0 w-full">
       <div className="max-w-7xl mx-auto px-2 md:px-0 h-16 flex items-center">
         <div className="flex gap-8 items-center">
           <Image
@@ -45,7 +45,7 @@ export default function Navbar() {
             alt="Paphos Sea"
             className="w-[15%]"
           />
-          <div className="flex gap-8">
+          <div className="md:flex gap-8 hidden">
             {navItems.map((nav, index) => (
               <Link
                 href={nav.href}
