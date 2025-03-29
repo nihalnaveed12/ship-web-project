@@ -7,12 +7,12 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="relative">
         {/* Background Image */}
-        <div className="relative h-[400px] w-full">
+        <div className="relative h-[500px] ">
           <Image
             src="/backgrounds/blue.jpg"
             alt="Blue wave background"
             fill
-            className="object-cover"
+            className=""
             priority
           />
 
