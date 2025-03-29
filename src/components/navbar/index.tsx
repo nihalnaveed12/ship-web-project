@@ -35,15 +35,15 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-white text-black fixed z-20 top-0 w-full">
-      <div className="max-w-7xl mx-auto px-2 md:px-0 h-16 flex items-center">
-        <div className="flex gap-8 items-center">
+    <div className="bg-white text-black fixed z-20 top-0 w-full px-4">
+      <div className="max-w-7xl mx-auto md:px-0 h-16 flex items-center  justify-between">
+        <div className="flex gap-8 items-center ">
           <Image
             src={"/images/logo.png"}
             height={1000}
             width={1000}
             alt="Paphos Sea"
-            className="w-[15%]"
+            className="w-[200px]"
           />
           <div className="md:flex gap-8 hidden">
             {navItems.map((nav, index) => (
