@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <div
       className="relative w-full h-screen overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url(/images/ship-image.png)" }}
+      style={{ backgroundImage: "url(/images/ship-image.png" }}
     >
       {/* Content Container */}
       <div className="relative z-10 h-full flex flex-col justify-between">
