@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="relative">
         {/* Background Image */}
-        <div className="relative h-[500px] ">
+        <div className="relative h-[450px] ">
           <Image
             src="/backgrounds/blue.jpg"
             alt="Blue wave background"
@@ -18,7 +18,7 @@ export default function Home() {
 
           {/* Tours Title */}
           <div className="absolute inset-0 flex items-center justify-start px-8 sm:px-16 md:px-24 lg:px-32">
-            <h1 className="text-white text-4xl md:text-5xl font-bold">Tours</h1>
+            <h1 className="text-white text-4xl md:text-6xl font-sans font-bold">Tours</h1>
           </div>
         </div>
 

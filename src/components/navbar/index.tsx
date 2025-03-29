@@ -14,7 +14,7 @@ export default function Navbar() {
     },
     {
       name: "Destination",
-      href: "/destination",
+      href: "/destinations",
     },
     {
       name: "Pickup Points",

@@ -40,12 +40,12 @@ export default function HeroSection() {
         </div>
 
         {/* Play Button */}
-        <div className="absolute right-10 md:right-16 top-1/2 transform -translate-y-1/2">
+        <div className="absolute right-10 md:right-40 bottom-15 md:bottom-30 transform -translate-y-1/2">
           <button
-            className="w-6 h-6 md:w-24 md:h-24 rounded-full bg-white bg-opacity-90 flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white bg-opacity-90 flex items-center justify-center hover:bg-opacity-100 transition-all shadow-lg"
             aria-label="Play video"
           >
-            <Play className="h-8 w-8 text-[#0099cc] ml-1" fill="#0099cc" />
+            <Play className="h-6 w-6 text-[#0099cc] ml-1" fill="#0099cc" />
           </button>
         </div>
 
