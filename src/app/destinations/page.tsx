@@ -23,7 +23,7 @@ const destinations = [
   },
 ];
 
-export default function () {
+export default function Destinations() {
   return (
     <div className="">
       <div className="relative h-[450px] ">
