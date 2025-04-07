@@ -1,6 +1,32 @@
-export const Tours = [
+export interface Tour {
+  image: string;
+  hours: number;
+  title: string;
+  subtitle: string;
+  adultFee: number;
+  childFee: number;
+  route: string;
+  time: string;
+  Days: string;
+  desc1: string;
+  desc2: string;
+  desc3: string;
+  features: {
+    f1: string;
+    f2: string;
+    f3: string;
+    f4: string;
+    f5: string;
+    f6: string;
+    f7: string;
+    f8: string;
+  };
+}
+
+
+export const Tours:Tour[] = [
   {
-    image: "/tour2.jpg",   
+    image: "/tours/tour2.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -15,7 +41,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -26,11 +52,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/pop-tours.jpg",   
+    image: "/tours/pop-tours.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -45,7 +71,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -56,11 +82,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/tour2.jpg",   
+    image: "/tours/tour2.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -75,7 +101,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -86,11 +112,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/tour2.jpg",   
+    image: "/tours/tour2.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -105,7 +131,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -116,11 +142,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/tour2.jpg",   
+    image: "/tours/tour2.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -135,7 +161,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features:
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -146,11 +172,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/tour2.jpg",   
+    image: "/tours/pop-tours.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -165,7 +191,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -176,11 +202,11 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 
   {
-    image: "/tour2.jpg",   
+    image: "/tours/tour2.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -195,7 +221,7 @@ export const Tours = [
       "Departing from the charming Latchi harbour, you will be enveloped by the awe-inspiring beauty of the Mediterranean Sea, passing by the legendary Aphrodite's Baths, a site rich in mythology and history.Our voyage continues to the renowned Blue Lagoon, offering the perfect opportunity to luxuriate in a revitalizing swim in the pristine, azure waters.",
     desc3:
       "This day is dedicated to relaxation, sightseeing, and basking in the sun as we sail through one of Cyprus's most magnificent regions. Join us for a day of opulence and leisure as we treat you to an unforgettable excursion along the captivating coast of Latchi.",
-    features: [
+    features: 
       {
         f1: "Enchanting surround music",
         f2: "Complimentary use of canoeing",
@@ -206,7 +232,7 @@ export const Tours = [
         f7: "Complimentary use of swimming noodles",
         f8: "Complimentary Wi-Fi",
       },
-    ],
+    
   },
 ];
 

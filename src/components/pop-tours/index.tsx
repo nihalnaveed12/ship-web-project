@@ -11,11 +11,26 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import {motion} from "framer-motion"
+import { Tour, Tours } from "@/data/tours";
+
+type propTypes = {
+  image: string,
+  title: string,
+  hours: number,
+  adutlFee: number,
+  childFee: number,
+}
+
 
 export default function PopularToursCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [ToursData, setTours] = useState<Tour[]>([])
+
+  useEffect(() => {
+    setTours(Tours)
+  })
 
   useEffect(() => {
     if (!api) return;
@@ -72,9 +87,9 @@ export default function PopularToursCarousel() {
           className="w-full"
         >
           <CarouselContent className="py-8 ml-8 mr-2 ">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+            {ToursData.map((tours, index) => (
               <CarouselItem key={index} className=" md:basis-1/2 lg:basis-1/3">
-                <TourCard />
+                <TourCard image={tours.image} adutlFee={tours.adultFee} childFee={tours.childFee} hours={tours.hours} title={tours.title}/>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -86,7 +101,7 @@ export default function PopularToursCarousel() {
         </Carousel>
 
         <div className="flex justify-center gap-2 mt-6 ">
-          {Array.from({ length: count }).map((_, index) => (
+          {Tours.map((_, index) => (
             <button
               key={index}
               className={`h-2 rounded-full transition-all cursor-pointer ${
