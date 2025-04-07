@@ -13,13 +13,6 @@ import {
 import {motion} from "framer-motion"
 import { Tour, Tours } from "@/data/tours";
 
-type propTypes = {
-  image: string,
-  title: string,
-  hours: number,
-  adutlFee: number,
-  childFee: number,
-}
 
 
 export default function PopularToursCarousel() {
