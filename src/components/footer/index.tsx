@@ -249,7 +249,7 @@ export default function Footer() {
             <p>
               Developed by{" "}
               <Link href="#" className="text-[#3498db] hover:underline">
-                Air Balloon Digital Studio
+                Nihal Naveed
               </Link>
             </p>
           </div>

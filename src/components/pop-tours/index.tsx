@@ -102,18 +102,6 @@ export default function PopularToursCarousel() {
       </div>
 
       {/* Background decorative elements */}
-      <div
-        className="absolute top-0 right-0 w-64 h-64 bg-contain bg-no-repeat opacity-10"
-        style={{
-          backgroundImage: "url('/placeholder.svg?height=200&width=200')",
-        }}
-      ></div>
-      <div
-        className="absolute bottom-0 left-0 w-64 h-64 bg-contain bg-no-repeat opacity-10"
-        style={{
-          backgroundImage: "url('/placeholder.svg?height=200&width=200')",
-        }}
-      ></div>
     </div>
   );
 }

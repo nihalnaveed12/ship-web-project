@@ -18,7 +18,7 @@ export default function Places() {
       id: "paphos",
       name: "Paphos",
       tours: 6,
-      image: "/images/place1.jpg",
+      image: "/images/place2.jpg",
     },
   ];
 
