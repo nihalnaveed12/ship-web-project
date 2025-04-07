@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Instagram, Mail, Youtube } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Facebook, Instagram, Mail, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,7 +10,11 @@ export default function Footer() {
       {/* Top wavy pattern with contact info */}
       <div className="relative bg-[#e8f0f7] py-8 px-4 md:px-8">
         <div className="absolute inset-0 overflow-hidden">
-          <svg className="absolute w-full h-full opacity-10" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <svg
+            className="absolute w-full h-full opacity-10"
+            viewBox="0 0 1000 200"
+            preserveAspectRatio="none"
+          >
             <path
               d="M0,100 C150,200 350,0 500,100 C650,200 850,0 1000,100 L1000,0 L0,0 Z"
               fill="currentColor"
@@ -20,21 +24,37 @@ export default function Footer() {
         </div>
 
         <div className="relative z-10 container mx-auto text-center">
-          <p className="text-[#2c3e50] text-lg mb-4">Don&apos;t wait any longer. Contact us!</p>
+          <p className="text-[#2c3e50] text-lg mb-4">
+            Don&apos;t wait any longer. Contact us!
+          </p>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="flex items-center justify-center gap-2">
               <div className="bg-white rounded-full p-2 w-10 h-10 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
                     stroke="#0066cc"
                     strokeWidth="2"
                   />
-                  <path d="M12 6V12L16 14" stroke="#0066cc" strokeWidth="2" strokeLinecap="round" />
+                  <path
+                    d="M12 6V12L16 14"
+                    stroke="#0066cc"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
-              <Link href="tel:+35726910200" className="text-[#0066cc] font-bold text-xl hover:underline">
+              <Link
+                href="tel:+35726910200"
+                className="text-[#0066cc] font-bold text-xl hover:underline"
+              >
                 +357 26910200
               </Link>
             </div>
@@ -79,16 +99,28 @@ export default function Footer() {
 
             <p className="mb-2">Follow us</p>
             <div className="flex gap-2">
-              <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
+              <Link
+                href="#"
+                className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+              >
                 <Facebook size={20} className="text-[#1e3163]" />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
+              <Link
+                href="#"
+                className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+              >
                 <Instagram size={20} className="text-[#1e3163]" />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
+              <Link
+                href="#"
+                className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+              >
                 <Mail size={20} className="text-[#1e3163]" />
               </Link>
-              <Link href="#" className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
+              <Link
+                href="#"
+                className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+              >
                 <Youtube size={20} className="text-[#1e3163]" />
               </Link>
             </div>
@@ -96,10 +128,15 @@ export default function Footer() {
 
           {/* Useful links */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">Useful</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+              Useful
+            </h3>
             <ul className="space-y-3 text-center md:text-left">
               <li>
-                <Link href="#" className="hover:underline">
+                <Link
+                  href="/frequently-asked-questions"
+                  className="hover:underline"
+                >
                   FAQ / Useful Info
                 </Link>
               </li>
@@ -114,12 +151,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/gallery" className="hover:underline">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/contact" className="hover:underline">
                   Contact us
                 </Link>
               </li>
@@ -128,20 +165,22 @@ export default function Footer() {
 
           {/* Explore links */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">Explore</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+              Explore
+            </h3>
             <ul className="space-y-3 text-center md:text-left">
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/tours" className="hover:underline">
                   Tours
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/destinations" className="hover:underline">
                   Destinations
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/pickup-points" className="hover:underline">
                   Pickup Points
                 </Link>
               </li>
@@ -151,7 +190,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/blogs" className="hover:underline">
                   Blog
                 </Link>
               </li>
@@ -160,13 +199,16 @@ export default function Footer() {
 
           {/* Book Online section */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">Book Online</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+              Book Online
+            </h3>
             <p className="mb-6 text-center md:text-left">
-              Select our sea cruises for stunning views, luxury amenities, and personalized itineraries.*
+              Select our sea cruises for stunning views, luxury amenities, and
+              personalized itineraries.*
             </p>
             <div className="flex justify-center md:justify-start mb-6">
               <Link
-                href="#"
+                href="/tours"
                 className="bg-[#0088cc] text-white px-6 py-2 rounded hover:bg-[#006699] transition-colors uppercase font-bold"
               >
                 Book Now
@@ -229,7 +271,13 @@ export default function Footer() {
           className="bg-[#0088cc] text-white p-3 rounded-full hover:bg-[#006699] transition-colors"
           aria-label="Scroll to top"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M18 15L12 9L6 15"
               stroke="currentColor"
@@ -241,6 +289,5 @@ export default function Footer() {
         </button>
       </div>
     </footer>
-  )
+  );
 }
-

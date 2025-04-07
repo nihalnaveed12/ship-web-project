@@ -1,4 +1,5 @@
 import GatewaySec from "@/components/gateway-sec";
+import HeroSection from "@/components/hero";
 import Hero from "@/components/hero";
 import Places from "@/components/places-sec";
 import PopularToursCarousel from "@/components/pop-tours";
@@ -10,11 +11,13 @@ import WhyChoose from "@/components/why-choose";
 export default function Home() {
   return (
     <div className="">
-      <Hero />
+      <HeroSection />
 
       <SearchBar />
+      
       <section>
-        <Places />
+        <Places /> 
+
       </section>
 
       <PopularToursCarousel />

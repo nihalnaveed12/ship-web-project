@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Places() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
@@ -24,33 +25,29 @@ export default function Places() {
   return (
     <div className="relative top-10 py-10">
       <div className="flex flex-col gap-4 items-center">
-        <h4 className="text-[18px] text-[#0A71B8] font-serif">Places to goo</h4>
-        <h1 className="text-5xl font-extrabold font-sans">
+        <motion.h4
+          initial={{ opacity: 0, x: -300 }}
+          whileInView={{
+            opacity: 2,
+            x: 0,
+            transition: { duration: 0.8 },
+          }}
+          className="text-[18px] text-[#0A71B8] font-serif italic"
+        >
+          Places to goo
+        </motion.h4>
+        <motion.h1
+          initial={{ opacity: 0, x: -300 }}
+          whileInView={{
+            opacity: 2,
+            x: 0,
+            transition: { duration: 0.8 },
+          }}
+          className="text-5xl font-extrabold font-sans"
+        >
           Perfect Destinations
-        </h1>
+        </motion.h1>
       </div>
-
-      {/* <div className="flex gap-6 pt-8 justify-center">
-        <div className=" w-[45%] h-[400px] overflow-hidden border  rounded-[16px] relative">
-          <Image
-            src={"/images/place1.jpg"}
-            alt="Blue Lagoon - Latchi"
-            height={1000}
-            width={1000}
-            className="transition-transform hover:scale-110 duration-500 object-cover "
-          />
-        </div>
-        <div className="w-[45%] h-[400px] overflow-hidden border  rounded-[16px] relative">
-          <Image
-            src={"/images/place1.jpg"}
-            alt="Blue Lagoon - Latchi"
-            height={1000}
-            width={1000}
-            className="transition-transform hover:scale-110 duration-500 object-cover "
-          />
-          <div className="bg-black transition-transform hover:scale-110 duration-500 object-cover "></div>
-        </div>
-      </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
         {destinations.map((destination) => (
