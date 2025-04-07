@@ -8,7 +8,7 @@ export default function TourCard() {
       {/* Card Image */}
       <div className="relative h-[250px]  overflow-hidden rounded-[20px] ">
         <Image
-          src="/images/pop-tours.jpg"
+          src="/tours/pop-tours.jpg"
           alt="Luxury yacht on Blue Lagoon Afternoon tour"
           fill
           className="object-cover"
