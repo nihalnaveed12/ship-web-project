@@ -1,6 +1,5 @@
 import GatewaySec from "@/components/gateway-sec";
 import HeroSection from "@/components/hero";
-import Hero from "@/components/hero";
 import Places from "@/components/places-sec";
 import PopularToursCarousel from "@/components/pop-tours";
 import Reviews from "@/components/reviews";
