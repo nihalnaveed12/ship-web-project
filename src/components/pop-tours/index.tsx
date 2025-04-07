@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import {motion} from "framer-motion"
 
 export default function PopularToursCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -40,10 +41,27 @@ export default function PopularToursCarousel() {
   return (
     <div className="w-full max-w-7xl mx-auto md:px-0  pb-20 pt-10 relative ">
       <div className="relative z-10">
-        <p className="text-center text-[#0A71B8] font-script text-xl mb-2">
+        <motion.p 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        className="text-center text-[#0A71B8] font-script text-xl mb-2">
           What&apos;s new
-        </p>
-        <h2 className="text-center text-4xl font-bold mb-10">Popular Tours</h2>
+        </motion.p>
+        <motion.h2 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5 },
+        }}
+        className="text-center text-4xl font-bold mb-10">
+          
+        Popular Tours
+        </motion.h2>
 
         <Carousel
           setApi={setApi}
@@ -53,7 +71,7 @@ export default function PopularToursCarousel() {
           }}
           className="w-full"
         >
-          <CarouselContent className="py-8 ml-8 ">
+          <CarouselContent className="py-8 ml-8 mr-2 ">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
               <CarouselItem key={index} className=" md:basis-1/2 lg:basis-1/3">
                 <TourCard />

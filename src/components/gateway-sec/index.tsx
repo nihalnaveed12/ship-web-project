@@ -1,14 +1,30 @@
+"use client";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import {motion} from "framer-motion"
 
 export default function GatewaySec() {
   return (
-    <div className="flex lg:flex-row flex-col gap-6 px-4">
+    <div className="relative flex lg:flex-row flex-col gap-6 px-4">
       <div className="flex gap-10 flex-col lg:w-[30%] w-full justify-center lg:items-start items-center ">
-        <h3 className="text-[16px] text-[#0A71B8]">Incredible Escapes</h3>
-        <h1 className="text-5xl font-sans font-extrabold">
+        <motion.h3 
+        initial={{ opacity: 0, x:-100 }}
+        whileInView={{
+          opacity: 2,
+          x: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-[16px] text-[#0A71B8]">Incredible Escapes</motion.h3>
+        <motion.h1 
+        initial={{ opacity: 0, x:-100 }}
+        whileInView={{
+          opacity: 2,
+          x: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-5xl font-sans font-extrabold">
           Must see <br /> Getaways
-        </h1>
+        </motion.h1>
         <Button className="bg-[#0A71B8] hover:bg-[#0A71B8] rounded-[6px] px-6 py-4 lg:w-[60%] lg:h-[15%]  cursor-pointer">
           Discover Now
         </Button>
@@ -35,6 +51,13 @@ export default function GatewaySec() {
           <h2 className="absolute bottom-2 px-7 text-2xl font-sans  text-white">Peyia Destinations</h2>
         </div>
       </div>
+
+      <div
+        className="absolute top-0 -left-20 w-100 h-100 bg-contain bg-no-repeat opacity-30 -z-1"
+        style={{
+          backgroundImage: "url('/gate-back.png')",
+        }}
+      ></div>
     </div>
   );
 }

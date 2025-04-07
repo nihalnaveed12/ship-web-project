@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/com
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import {motion} from "framer-motion"
 
 // Blog post data
 const blogPosts = [
@@ -68,8 +69,22 @@ export default function BlogCarousel() {
   return (
     <div className="">
       <div className="text-center mb-10">
-        <h3 className="text-blue-500 font-script text-2xl mb-2">Our blog</h3>
-        <h2 className="text-4xl md:text-5xl font-bold">Travel Tips and Advice</h2>
+        <motion.h3 
+        initial={{ opacity: 0, y:100 }}
+        whileInView={{
+          opacity: 2,
+          y: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-blue-500 font-script text-2xl mb-2">Our blog</motion.h3>
+        <motion.h2 
+        initial={{ opacity: 0, y:100 }}
+        whileInView={{
+          opacity: 2,
+          y: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-4xl md:text-5xl font-bold">Travel Tips and Advice</motion.h2>
       </div>
 
       <div className="relative">

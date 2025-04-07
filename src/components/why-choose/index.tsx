@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-
+import {motion} from "framer-motion"
 export default function WhyChoose() {
   const items = [
     {
@@ -25,14 +26,28 @@ export default function WhyChoose() {
   ];
 
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-20 pt-12 pb-24">
       <div className="flex flex-col justify-center gap-4">
-        <h2 className="text-[16px] text-[#0A71B8] text-center">
+        <motion.h2
+        initial={{ opacity: 0, x:-100 }}
+        whileInView={{
+          opacity: 2,
+          x: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-[16px] text-[#0A71B8] text-center">
           Brilliant reasons
-        </h2>
-        <h1 className="text-5xl font-sans font-extrabold text-center">
+        </motion.h2>
+        <motion.h1 
+        initial={{ opacity: 0, x:-100 }}
+        whileInView={{
+          opacity: 2,
+          x: 0,
+          transition: { duration: 0.6 },
+        }}
+        className="text-5xl font-sans font-extrabold text-center">
           Why Choose Us
-        </h1>
+        </motion.h1>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
         {items.map((item, index) => (
