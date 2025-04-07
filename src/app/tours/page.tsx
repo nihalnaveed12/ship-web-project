@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SearchBar from "@/components/search-bar";
-import TourCard from "@/components/tour-card";
+import ToursCards from "@/components/tours-page";
 
 export default function Home() {
   return (
@@ -26,11 +26,7 @@ export default function Home() {
         <SearchBar />
 
       
-      <div className="grid lg:grid-cols-3 max-w-6xl mx-auto md:grid-cols-2 px-4 gap-y-8 py-16 place-items-center">
-        {[1,2,3,4,5,6,7,8,9].map((index) => (
-            <TourCard key={index}/>
-        ))}
-      </div>
+      <ToursCards />
 
       </div>
     </main>
