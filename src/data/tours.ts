@@ -86,7 +86,7 @@ export const Tours:Tour[] = [
   },
 
   {
-    image: "/tours/tour2.jpg",   
+    image: "/tours/tour3.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -116,7 +116,7 @@ export const Tours:Tour[] = [
   },
 
   {
-    image: "/tours/tour2.jpg",   
+    image: "/tours/tour4.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -146,7 +146,7 @@ export const Tours:Tour[] = [
   },
 
   {
-    image: "/tours/tour2.jpg",   
+    image: "/tours/tour5.jpeg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -176,7 +176,7 @@ export const Tours:Tour[] = [
   },
 
   {
-    image: "/tours/pop-tours.jpg",   
+    image: "/tours/tour6.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",
@@ -206,7 +206,7 @@ export const Tours:Tour[] = [
   },
 
   {
-    image: "/tours/tour2.jpg",   
+    image: "/tours/tour7.jpg",   
     hours: 4,
     title: "Celebrity Blue Lagoon Afternoon",
     subtitle: "Ocean Blue",

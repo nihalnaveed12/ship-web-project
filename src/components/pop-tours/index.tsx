@@ -79,10 +79,10 @@ export default function PopularToursCarousel() {
           }}
           className="w-full"
         >
-          <CarouselContent className="py-8 ml-8 mr-2 ">
+          <CarouselContent className="py-8 mx-auto ">
             {ToursData.map((tours, index) => (
-              <CarouselItem key={index} className=" md:basis-1/2 lg:basis-1/3">
-                <TourCard image={tours.image} adutlFee={tours.adultFee} childFee={tours.childFee} hours={tours.hours} title={tours.title}/>
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <TourCard image={tours.image} adutlFee={tours.adultFee} childFee={tours.childFee} hours={tours.hours} title={tours.title} />
               </CarouselItem>
             ))}
           </CarouselContent>

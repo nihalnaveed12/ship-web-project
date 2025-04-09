@@ -12,13 +12,13 @@ const destinations = [
   {
     title: "Blue Lagoon - Akamas",
     desc: "Blue Lagoon offers a unique perspective of the beautiful landscape that defines the region.",
-    src: "/destination-img/destination.jpeg",
+    src: "/destination-img/dest2.jpg",
     href: "/blue-lagoon-akamas",
   },
   {
     title: "Blue Lagoon - Akamas",
     desc: "Blue Lagoon offers a unique perspective of the beautiful landscape that defines the region.",
-    src: "/destination-img/destination.jpeg",
+    src: "/destination-img/dest3.jpg",
     href: "/blue-lagoon-akamas",
   },
 ];

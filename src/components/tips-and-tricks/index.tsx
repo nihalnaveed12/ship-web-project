@@ -9,20 +9,22 @@ import { cn } from "@/lib/utils"
 import {motion} from "framer-motion"
 
 // Blog post data
+
+
 const blogPosts = [
   {
     id: 1,
     title: "Best Months to Cruise in Cyprus: A Year-Round Guide",
     content:
       "The Mediterranean is an attractive area comprising approximately 20 countries in Southern Europe and North Africa, bordered by...",
-    image: "/blog1.jpg",
+    image: "/blogs/blog1.jpg",
     category: "BLOG",
   },
   {
     id: 2,
     title: "Approval Granted for New Marina and Cruise Ship Dock in Paphos",
     content: "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by...",
-    image: "/blog1.jpg",
+    image: "/blogs/blogs1.jpg",
     category: "BLOG",
   },
   {
@@ -30,7 +32,7 @@ const blogPosts = [
     title: "Top 10 Mediterranean Cruise Destinations",
     content:
       "Discover the most beautiful ports and islands that make Mediterranean cruises so popular among travelers seeking...",
-    image: "/blog1.jpg",
+    image: "/blogs/blogs3.jpg",
     category: "BLOG",
   },
   {
@@ -38,7 +40,7 @@ const blogPosts = [
     title: "Cruise Ship Safety Protocols: What You Need to Know",
     content:
       "Modern cruise ships implement rigorous safety measures to ensure passenger wellbeing. From emergency drills to...",
-    image: "/blog1.jpg",
+    image: "/blogs/blogs4.jpg",
     category: "BLOG",
   },
 ]

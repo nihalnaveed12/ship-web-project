@@ -9,7 +9,7 @@ export default function ToursCards() {
     setTours(Tours);
   });
   return (
-    <div className="grid lg:grid-cols-3 max-w-6xl mx-auto md:grid-cols-2 px-4 gap-y-8 py-16 place-items-center">
+    <div className="grid lg:grid-cols-3 max-w-6xl mx-auto sm:grid-cols-2 px-4 gap-y-8 py-16 gap-x-8 ">
       {ToursData.map((tours, index) => (
         <TourCard
           key={index}

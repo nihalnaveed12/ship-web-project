@@ -1,21 +1,37 @@
 import Image from "next/image";
 
-const Blogs = [
+const blogPosts = [
   {
-    title: "Approval Garandted for New Marina and Cruise Ship Dock in Paphos",
-    desc: "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by Tourism Minister Savvas Perdios. This development, which includes a hotel, marina,...",
+    id: 1,
+    title: "Best Months to Cruise in Cyprus: A Year-Round Guide",
+    content:
+      "The Mediterranean is an attractive area comprising approximately 20 countries in Southern Europe and North Africa, bordered by...",
+    image: "/blogs/blog1.jpg",
+    category: "BLOG",
   },
   {
-    title: "Approval Garandted for New Marina and Cruise Ship Dock in Paphos",
-    desc: "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by Tourism Minister Savvas Perdios. This development, which includes a hotel, marina,...",
+    id: 2,
+    title: "Approval Granted for New Marina and Cruise Ship Dock in Paphos",
+    content:
+      "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by...",
+    image: "/blogs/blogs1.jpg",
+    category: "BLOG",
   },
   {
-    title: "Approval Garandted for New Marina and Cruise Ship Dock in Paphos",
-    desc: "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by Tourism Minister Savvas Perdios. This development, which includes a hotel, marina,...",
+    id: 3,
+    title: "Top 10 Mediterranean Cruise Destinations",
+    content:
+      "Discover the most beautiful ports and islands that make Mediterranean cruises so popular among travelers seeking...",
+    image: "/blogs/blogs3.jpg",
+    category: "BLOG",
   },
   {
-    title: "Approval Garandted for New Marina and Cruise Ship Dock in Paphos",
-    desc: "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by Tourism Minister Savvas Perdios. This development, which includes a hotel, marina,...",
+    id: 4,
+    title: "Cruise Ship Safety Protocols: What You Need to Know",
+    content:
+      "Modern cruise ships implement rigorous safety measures to ensure passenger wellbeing. From emergency drills to...",
+    image: "/blogs/blogs4.jpg",
+    category: "BLOG",
   },
 ];
 
@@ -40,21 +56,28 @@ export default function BlogsPage() {
       </div>
 
       <div className="grid sm:grid-cols-2 max-w-6xl mx-auto px-4  gap-x-8 gap-y-16 pb-12">
-        {Blogs.map((blog, index) => (
-          <div className="flex flex-col gap-2 shadow-md pb-2 " key={index}>
-            <Image
-              src={"/blogs1.jpg"}
-              height={1000}
-              width={1000}
-              alt={blog.title}
-              className=""
-            />
-
-            <div className="rounded-full border border-blue-800 font-sans w-[55px] px-2 text-center mx-2">
-              Blog
+        {blogPosts.map((blog, index) => (
+          <div className="flex flex-col gap-3 shadow-md pb-4 " key={index}>
+            <div className="overflow-hidden  aspect-video  rounded-[20px] relative">
+              <Image
+                src={blog.image}
+                height={1000}
+                width={1000}
+                alt={blog.title}
+                className="transition-transform hover:scale-110 duration-500 object-cover object-center  relative"
+              />
             </div>
-            <h1 className="text-2xl font-semibold font-sans mx-2">{blog.title}</h1>
-            <p className="text-[10px] font-sans text-zinc-500 mx-2">{blog.desc}</p>
+            
+              <div className="rounded-full border border-blue-800 font-sans w-[55px] px-2 text-center mx-2">
+                Blog
+              </div>
+              <h1 className="text-2xl font-semibold font-sans mx-2">
+                {blog.title}
+              </h1>
+              <p className="text-[10px] font-sans text-zinc-500 mx-2">
+                {blog.content}
+              </p>
+            
           </div>
         ))}
       </div>

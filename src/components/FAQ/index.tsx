@@ -10,35 +10,90 @@ const faqData = [
   {
     id: "item-1",
     question: "Can I arrange a cruise booking for longer than one month?",
-    answer:
-      "Yes, you can arrange a cruise booking for longer than one month. Please contact our customer service team for assistance with extended bookings.",
+    answer:"Yes, please follow these steps:  1. Navigate to paphosseacruises.com  click the Book Now button. 2. You will see search tours: For the start date, please specify the exact date you would like to book, for example, August 20. The end date can be the same as the start date if you need a specific date, or you can leave it as default to search for a one-month period. 3. Please click the “Perform Tour Search” button. 4. Scroll down until you find your desired cruise or use the next page if needed. 5. Click the “Book It” button. You should be able to proceed with your booking."
   },
   {
     id: "item-2",
     question:
       "I made my booking online. Do I require another ticket, or can I use this as my ticket?",
     answer:
-      "Your online booking confirmation serves as your ticket. You can either print it or show it on your mobile device when boarding.",
+      "No, this is your actual ticket.",
   },
   {
     id: "item-3",
     question:
       "I need to change my booking to another day. Can I do this without any extra charge?",
     answer:
-      "Yes, you can change your booking to another day without extra charges if done at least 48 hours before departure. Please contact our customer service.",
+      "Yes, our team can change your booking without any extra charge. Please email us at info@paphosseacruises.com to do this for you.",
   },
   {
     id: "item-4",
     question: "I didn't attend my cruise, could I still join for another day?",
     answer:
-      "If you missed your cruise, please contact us as soon as possible. Depending on availability, we may be able to reschedule your trip.",
+      "Yes, this is possible. Please let us know via email to perform this operation for you.",
   },
   {
     id: "item-5",
     question:
       "I booked your cruises with another provider; how do I change my departure day?",
     answer:
-      "For bookings made through third-party providers, you'll need to contact them directly to make any changes to your departure day.",
+      "You will need to contact our partner for further assistance.",
+  },
+  {
+    id: "item-6",
+    question:
+      "My hotel is not listed in the droplist when I choose transfer. How to find my hotel?",
+    answer:
+      "If your hotel is not listed, please select the closest pick-up point, or contact us for further assistance.",
+  },
+  {
+    id: "item-7",
+    question:
+      "Do you provide transportation from Private Villas?",
+    answer:
+      "Unfortunately, we currently do not offer transportation from private villas; we only provide pickups from predefined points.",
+  },
+  {
+    id: "item-8",
+    question:
+      "Do you provide transportation within a given range?",
+    answer:
+      "Our predefined pick-up points and times are detailed in our cruise manual, which can be found on our website, or you can choose them during the online booking process.",
+  },
+  {
+    id: "item-9",
+    question:
+      "If I do not want the transfer service, how can I arrive at Paphos Harbour",
+    answer:
+      "You could arrive at Paphos Harbour either by taxi, public transportation, rental car if you are renting one or your own car if you are local.",
+  },
+  {
+    id: "item-10",
+    question:
+      "Where can I park my car in Paphos Harbour?",
+    answer:
+      "There is a free parking area available for use in front of the Paphos Archaeological site.",
+  },
+  {
+    id: "item-11",
+    question:
+      "Can I use my own transportation to arrive at Latchi Harbour?",
+    answer:
+      "Specific tours start and finish in different places therefore if you are to park at Latchi Harbour you will not be able to meet your car after the cruise. We highly recommend to use our transportation service for all cruises based in Latchi.",
+  },
+  {
+    id: "item-12",
+    question:
+      "If the cruise starts and finishes in Latchi Harbour can I use my own transportation service?",
+    answer:
+      "It is possible if you have your own car and use navigation assistance. There is a free parking space in Latchi Harbour close to our docking points. If not, transportation fees could be expensive and difficult to arrive. We always recommend using our own transportation service included in your ticket price.",
+  },
+  {
+    id: "item-13",
+    question:
+      "In case of cancellation due to weather conditions do I get my money back?",
+    answer:
+      "Yes, a full refund will be offered if you do not wish to select the next day available.",
   },
 ];
 
@@ -98,7 +153,7 @@ export default function FindAnswersSection() {
                 onClick={() => toggleAccordion(item.id)}
                 className="flex items-center justify-between w-full py-4 text-left font-medium text-gray-800 hover:text-gray-600 focus:outline-none"
               >
-                <span className="text-base pr-8">{item.question}</span>
+                <span className="text-base font-semibold font-sans pr-8">{item.question}</span>
                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full cursor-pointer">
                   <Plus className="h-6 w-6 text-blue-600 shrink-0" />
                 </div>

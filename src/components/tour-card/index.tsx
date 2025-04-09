@@ -12,14 +12,14 @@ type propTypes = {
 
 export default function TourCard(prop : propTypes) {
   return (
-    <div className="w-[90%] bg-white rounded-[20px] shadow-md overflow-hidden">
+    <div className="w-auto max-w-92 mx-auto bg-white rounded-[20px] shadow-md overflow-hidden">
       {/* Card Image */}
-      <div className="relative h-[250px] overflow-hidden rounded-[20px] ">
+      <div className="relative overflow-hidden h-[250px]  rounded-[20px] ">
         <Image
           src={prop.image}
           alt="Luxury yacht on Blue Lagoon Afternoon tour"
           fill
-          className="object-cover object-center"
+          className="object-cover"
         />
       </div>
 
