@@ -23,7 +23,7 @@ export default function PopularToursCarousel() {
 
   useEffect(() => {
     setTours(Tours)
-  })
+  },[])
 
   useEffect(() => {
     if (!api) return;

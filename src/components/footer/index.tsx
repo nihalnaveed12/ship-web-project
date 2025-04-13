@@ -141,12 +141,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/about-us" className="hover:underline">
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="/paphos-brochure-lr_compressed.pdf" className="hover:underline">
                   Brochure
                 </Link>
               </li>
@@ -246,12 +246,7 @@ export default function Footer() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <p>Paphos Sea Cruises. Copyright © 2025. All Rights Reserved.</p>
-            <p>
-              Developed by{" "}
-              <Link href="#" className="text-[#3498db] hover:underline">
-                Nihal Naveed
-              </Link>
-            </p>
+            
           </div>
           <div className="flex gap-4">
             <Link href="#" className="hover:underline">
