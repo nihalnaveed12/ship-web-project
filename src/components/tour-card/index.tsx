@@ -1,32 +1,40 @@
 import Image from "next/image";
 import { Clock, Users } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type propTypes = {
-  image: string,
-  title: string,
-  hours: number,
-  adutlFee: number,
-  childFee: number,
-}
+  image: string;
+  title: string;
+  hours: number;
+  adutlFee: number;
+  childFee: number;
+  href: string;
+};
 
-export default function TourCard(prop : propTypes) {
+export default function TourCard(prop: propTypes) {
   return (
-    <div className="w-auto max-w-92 mx-auto bg-white rounded-[20px] shadow-md overflow-hidden">
+    <div className="max-w-92 sm:min-w-92  bg-white rounded-[20px] shadow-md overflow-hidden">
       {/* Card Image */}
-      <div className="relative overflow-hidden h-[250px]  rounded-[20px] ">
+      <Link
+        href={prop.href}
+        className=""
+      >
+        <div className="relative overflow-hidden h-[250px]  rounded-[20px] ">
+
         <Image
           src={prop.image}
           alt="Luxury yacht on Blue Lagoon Afternoon tour"
           fill
-          className="object-cover"
+          className="transition-transform hover:scale-110 duration-500 object-cover relative cursor-pointer"
         />
-      </div>
+        </div>
+      </Link>
 
       {/* Card Content */}
       <div className="p-5 relative">
         {/* Icons Row */}
-        <div className="absolute bottom-28 bg-white rounded-[10px] mb-2 z-10 w-[90%] mx-auto border">
+        <div className="absolute -top-8 bg-white rounded-[10px] mb-2 z-10 w-[90%] mx-auto border">
           <div className="flex items-center justify-between p-3 ">
             <div className="flex items-center">
               <div className="flex items-center justify-center bg-white rounded-full p-1 shadow-sm">
@@ -44,15 +52,24 @@ export default function TourCard(prop : propTypes) {
         </div>
 
         {/* Title */}
-        <h3 className="text-[22px] font-bold text-gray-900 mb-3 leading-tight">
-          {prop.title}
-        </h3>
+        <Link href={prop.href}>
+          <h3 className="text-[22px] font-semibold font-sans hover:text-blue-400 text-gray-900 mb-3 leading-tight">
+            {prop.title}
+          </h3>
+        </Link>
 
         {/* Price and CTA */}
         <div className="flex items-center justify-between">
           <div className="text-gray-600 text-[15px]">
-            <span className="font-semibold text-gray-700">€{prop.adutlFee}</span> Adult /
-            <span className="font-semibold text-gray-700"> €{prop.childFee}</span> Child
+            <span className="font-semibold text-gray-700">
+              €{prop.adutlFee}
+            </span>{" "}
+            Adult /
+            <span className="font-semibold text-gray-700">
+              {" "}
+              €{prop.childFee}
+            </span>{" "}
+            Child
           </div>
           <button className="flex items-center text-[#2a3990] font-medium text-[15px]">
             Explore

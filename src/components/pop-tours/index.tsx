@@ -10,20 +10,18 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { Tour, Tours } from "@/data/tours";
-
-
 
 export default function PopularToursCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [ToursData, setTours] = useState<Tour[]>([])
+  const [ToursData, setTours] = useState<Tour[]>([]);
 
   useEffect(() => {
-    setTours(Tours)
-  },[])
+    setTours(Tours);
+  }, []);
 
   useEffect(() => {
     if (!api) return;
@@ -49,26 +47,27 @@ export default function PopularToursCarousel() {
   return (
     <div className="w-full max-w-7xl mx-auto md:px-0  pb-20 pt-10 relative ">
       <div className="relative z-10">
-        <motion.p 
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        className="text-center text-[#0A71B8] font-script text-xl mb-2">
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 },
+          }}
+          className="text-center text-[#0A71B8] font-script text-xl mb-2"
+        >
           What&apos;s new
         </motion.p>
-        <motion.h2 
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        className="text-center text-4xl font-bold mb-10">
-          
-        Popular Tours
+        <motion.h2
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 },
+          }}
+          className="text-center text-4xl font-bold mb-10"
+        >
+          Popular Tours
         </motion.h2>
 
         <Carousel
@@ -82,7 +81,14 @@ export default function PopularToursCarousel() {
           <CarouselContent className="py-8 mx-auto ">
             {ToursData.map((tours, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <TourCard image={tours.image} adutlFee={tours.adultFee} childFee={tours.childFee} hours={tours.hours} title={tours.title} />
+                <TourCard
+                  image={tours.image}
+                  adutlFee={tours.adultFee}
+                  childFee={tours.childFee}
+                  hours={tours.hours}
+                  title={tours.title}
+                  href={`/tours/${tours.slug}`}
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
