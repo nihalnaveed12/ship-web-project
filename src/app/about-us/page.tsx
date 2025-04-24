@@ -1,5 +1,10 @@
 import Image from "next/image";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About Us - Paphos Sea Cruises",
+  description:
+    "Discover everything about Paphos Sea Cruises, a family-owned business offering the best day and night cruises in Cyprus since 1983.",
+};
 
 export default function AboutUs() {
   return (
@@ -43,21 +48,50 @@ export default function AboutUs() {
           </h1>
         </div>
 
-       <div className="flex  lg:flex-row flex-col-reverse  gap-8 max-w-5xl mx-auto px-6">
+        <div className="flex  lg:flex-row flex-col-reverse  gap-8 max-w-5xl mx-auto px-6">
           <div className="lg:w-[50%] relative">
             <div className="">
-
-            <Image src={"/about.png"} alt="About Us" height={1000} width={1000} className="relative "/>
+              <Image
+                src={"/about.png"}
+                alt="About Us"
+                height={1000}
+                width={1000}
+                className="relative "
+              />
             </div>
-            <Image src={"/about1.png"} alt="About Us" height={1000} width={1000} className="absolute hidden lg:block left-90 bottom-0 w-24 "/>
+            <Image
+              src={"/about1.png"}
+              alt="About Us"
+              height={1000}
+              width={1000}
+              className="absolute hidden lg:block left-90 bottom-0 w-24 "
+            />
           </div>
           <div className="lg:w-[40%] flex flex-col gap-6 ">
-            <p className="font-serif italic text-xl text-[#0A71B8]">Paphos Sea Cruises</p>
-            <h1 className="font-sans text-5xl font-bold">The best day & Night Cruises in Cyprus</h1>
-            <p className="font-sans text-[14px] text-zinc-600">Paphos Sea Cruises is a member of the Masouras Bros Shipping Company Ltd and is known worldwide for its coastal cruises. We offer a wide variety of cruises, ranging from Full Day, Half Day, Sunset, Pirate, Catamaran, along with Wedding Receptions, Private Charters, Special Events, and Water Sports.</p>
-            <p className="font-sans text-[14px] text-zinc-600">Paphos Sea Cruises is a family owned business founded back in 1983. With a reputation for being experienced, reliable, methodical and passionate, we have been trusted by more than a million customers during all those years. Teamwork is a core tenant of our work, and such we offer pleasant and quality cruises around Cyprus. Feel free to explore our services and welcome aboard to discover the beauties of Cyprus.</p>
+            <p className="font-serif italic text-xl text-[#0A71B8]">
+              Paphos Sea Cruises
+            </p>
+            <h1 className="font-sans text-5xl font-bold">
+              The best day & Night Cruises in Cyprus
+            </h1>
+            <p className="font-sans text-[14px] text-zinc-600">
+              Paphos Sea Cruises is a member of the Masouras Bros Shipping
+              Company Ltd and is known worldwide for its coastal cruises. We
+              offer a wide variety of cruises, ranging from Full Day, Half Day,
+              Sunset, Pirate, Catamaran, along with Wedding Receptions, Private
+              Charters, Special Events, and Water Sports.
+            </p>
+            <p className="font-sans text-[14px] text-zinc-600">
+              Paphos Sea Cruises is a family owned business founded back in
+              1983. With a reputation for being experienced, reliable,
+              methodical and passionate, we have been trusted by more than a
+              million customers during all those years. Teamwork is a core
+              tenant of our work, and such we offer pleasant and quality cruises
+              around Cyprus. Feel free to explore our services and welcome
+              aboard to discover the beauties of Cyprus.
+            </p>
           </div>
-       </div>
+        </div>
       </section>
     </div>
   );

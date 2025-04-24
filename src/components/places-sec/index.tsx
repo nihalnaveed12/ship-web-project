@@ -9,13 +9,13 @@ export default function Places() {
 
   const destinations = [
     {
-      id: "blue-lagoon",
+      id: "locations/blue-lagoon",
       name: "Blue Lagoon - Latchi",
       tours: 6,
       image: "/images/place1.jpg",
     },
     {
-      id: "paphos",
+      id: "locations/paphos",
       name: "Paphos",
       tours: 6,
       image: "/images/place2.jpg",
@@ -52,7 +52,7 @@ export default function Places() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
         {destinations.map((destination) => (
           <Link
-            href={`/destinations/${destination.id}`}
+            href={`/${destination.id}`}
             key={destination.id}
             className="block"
             onMouseEnter={() => setHoveredCard(destination.id)}

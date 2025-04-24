@@ -17,10 +17,6 @@ export default function Navbar() {
       href: "/destinations",
     },
     {
-      name: "Pickup Points",
-      href: "/pickup-points",
-    },
-    {
       name: "Blog",
       href: "/blogs",
     },
@@ -62,9 +58,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center pt-1">
-          <Button className="bg-[#0A71B8] px-6 py-4 hover:bg-blue-500 cursor-pointer">
+          <Link href={"/tours"}>
+          
+          <Button className="bg-[#0A71B8] px-6 py-4 hover:bg-[#0A71a8] cursor-pointer">
             Book Now
           </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,6 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Destinations - Paphos Sea Cruises",
+
+  description: "Explore the stunning destinations with our exclusive tours. Experience the beauty of Cyprus like never before.",
+
+  keywords: "Destinations, Cyprus, tours, cruises, travel, adventure",
+}
+
+
+
 const destinations = [
   {
     title: "Blue Lagoon - Akamas",

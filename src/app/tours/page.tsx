@@ -2,6 +2,15 @@ import Image from "next/image";
 import SearchBar from "@/components/search-bar";
 import ToursCards from "@/components/tours-page";
 import { Suspense } from "react";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Tours - Paphos Sea Cruises",
+  description: "Explore our tours and book your adventure today!",
+
+  keywords: "tours, cruises, Paphos, Cyprus, adventure, travel",
+
+  authors: [{ name: "Paphos Sea Cruises" }],
+};
 
 export default function Home() {
   return (
@@ -29,7 +38,9 @@ export default function Home() {
         <SearchBar />
 
         {/* ✅ Wrap this in Suspense because it uses useSearchParams */}
-        <Suspense fallback={<div className="text-center py-10">Loading tours...</div>}>
+        <Suspense
+          fallback={<div className="text-center py-10">Loading tours...</div>}
+        >
           <ToursCards />
         </Suspense>
       </div>

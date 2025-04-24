@@ -1,6 +1,14 @@
 import Galleri from "@/components/gallery";
 import Image from "next/image";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Gallery - Paphos Sea Cruises",
+  description: "Explore our gallery of stunning images from our tours and experiences.",
+}
+
+
+
 export default function Gallery() {
   return (
     <div className="">

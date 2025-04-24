@@ -1,5 +1,11 @@
 import FindAnswersSection from "@/components/FAQ";
 import Image from "next/image";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Frequently asked Questions - Paphos Sea Cruises",
+  description: "Frequently asked questions about our tours and services.",
+}
+
 
 export default function FAQ() {
   return (

@@ -20,9 +20,7 @@ export default function ToursCarousels() {
     // Set up interval for auto-rotation (3 seconds)
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 10000);
-
-
+    }, 5000);
 
     // Update count and current slide
 
@@ -50,9 +48,9 @@ export default function ToursCarousels() {
           <span className="text-sm font-semibold text-zinc-600">
             {current} / {Tours.length}
           </span>
-          </div>
+        </div>
         {Tours.map((tours, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={index} className="md:basis-1/2 basis-full lg:basis-1/3">
             <Image
               src={tours.image}
               alt={tours.title}
@@ -63,10 +61,10 @@ export default function ToursCarousels() {
         ))}
       </CarouselContent>
       <CarouselPrevious
-            className="left-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer mr-2"
-            size="icon"
-          />
-          <CarouselNext className="right-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer " />
+        className="left-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer mr-2"
+        size="icon"
+      />
+      <CarouselNext className="right-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer " />
     </Carousel>
   );
 }

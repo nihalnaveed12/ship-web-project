@@ -4,12 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Tours } from "@/data/tours";
 import { CalendarDays, Clock, Euro, Route } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
-export default async function TourDetails({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const tour = Tours.find(
-    (tour) => tour.slug.includes === slug.includes
-  );
+
+
+export default async function TourDetails({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const tour = Tours.find((tour) => tour.slug === slug);
   if (!tour) {
     return <div>Tour not found</div>;
   }
@@ -39,10 +44,9 @@ export default async function TourDetails({ params }: { params: Promise<{ slug: 
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-10 ">
-
         <div className="flex sm:flex-row flex-col-reverse gap-16">
           <div className="flex flex-col gap-10 sm:w-[65%]">
-                <h2 className="text-2xl font-bold font-sans ">Overview</h2>
+            <h2 className="text-2xl font-bold font-sans ">Overview</h2>
             <div className="flex flex-col gap-4 font-sans ">
               <div className="flex flex-col gap-3 text-zinc-600 text-[15px]">
                 <p>{tour.desc1}</p>
@@ -56,11 +60,11 @@ export default async function TourDetails({ params }: { params: Promise<{ slug: 
                 Included Features
               </h2>
 
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-2 gap-y-3 gap-x-4">
                 {tour.features.map((feature, index) => (
                   <ul className="" key={index}>
-                    <li className="flex gap-2 items-center  text-zinc-600 text-[15px]">
-                      <span>{feature}</span>
+                    <li  className=" text-zinc-600 text-[15px] list-disc">
+                      {feature}
                     </li>
                   </ul>
                 ))}
@@ -138,9 +142,11 @@ export default async function TourDetails({ params }: { params: Promise<{ slug: 
             </div>
 
             <div className="">
-              <Button className="bg-[#0A71B8] hover:bg-[#0A73a1] cursor-pointer">
-                BOOK THIS CRUISE
-              </Button>
+              <Link href={`/booking/${tour.slug}`}>
+                <Button className="bg-[#0A71B8] hover:bg-[#0A73a1] cursor-pointer">
+                  BOOK THIS CRUISE
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -156,7 +162,9 @@ export default async function TourDetails({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="sm:w-[65%] py-16 ">
-          <h1 className="text-3xl font-bold font-sans py-3 sm:text-start text-center">You May Like</h1>
+          <h1 className="text-3xl font-bold font-sans py-3 sm:text-start text-center">
+            You May Like
+          </h1>
           <div className="grid md:grid-cols-2 gap-y-6 sm:place-content-start place-content-center">
             {Tours.slice(0, 2).map((tour, index) => (
               <TourCard

@@ -6,9 +6,9 @@ import { Facebook, Instagram, Mail, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full ">
       {/* Top wavy pattern with contact info */}
-      <div className="relative bg-[#e8f0f7] py-8 px-4 md:px-8">
+      <div className="relative bg-[#e8f0f7] py-8 px-4 md:px-8 ">
         <div className="absolute inset-0 overflow-hidden">
           <svg
             className="absolute w-full h-full opacity-10"
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer content */}
-      <div className="bg-[#1e3163] text-white py-12 px-4 md:px-8">
+      <div className="bg-[#1e3163] text-neutral-400  py-12 px-4 md:px-8">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Navi section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
@@ -88,10 +88,10 @@ export default function Footer() {
                 className="mx-auto md:mx-0"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-1">I&apos;m Navi</h3>
-            <p className="mb-1">Your compass navigator</p>
-            <p className="text-xl italic mb-2">Hop aboard</p>
-            <p className="mb-4">
+            <h3 className="text-2xl font-bold mb-1 text-white">I&apos;m Navi</h3>
+            <p className="mb-1 text-white">Your compass navigator</p>
+            <p className="text-xl italic mb-2 text-white">Hop aboard</p>
+            <p className="mb-4 text-white">
               and let&apos;s discover the beauties of
               <br />
               Cyprus by boat!
@@ -128,35 +128,35 @@ export default function Footer() {
 
           {/* Useful links */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+            <h3 className="text-xl text-white font-semibold mb-6 text-center md:text-left">
               Useful
             </h3>
             <ul className="space-y-3 text-center md:text-left">
               <li>
                 <Link
                   href="/frequently-asked-questions"
-                  className="hover:underline"
+                  className="hover:underline hover:text-neutral-200"
                 >
                   FAQ / Useful Info
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:underline">
+                <Link href="/about-us" className="hover:underline hover:text-neutral-200">
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link href="/paphos-brochure-lr_compressed.pdf" className="hover:underline">
+                <Link href="/paphos-brochure-lr_compressed.pdf" className="hover:underline hover:text-neutral-200">
                   Brochure
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:underline">
+                <Link href="/gallery" className="hover:underline hover:text-neutral-200">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline">
+                <Link href="/contact" className="hover:underline hover:text-neutral-200">
                   Contact us
                 </Link>
               </li>
@@ -165,32 +165,32 @@ export default function Footer() {
 
           {/* Explore links */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+            <h3 className="text-xl text-white font-semibold mb-6 text-center md:text-left">
               Explore
             </h3>
             <ul className="space-y-3 text-center md:text-left">
               <li>
-                <Link href="/tours" className="hover:underline">
+                <Link href="/tours" className="hover:underline hover:text-neutral-200">
                   Tours
                 </Link>
               </li>
               <li>
-                <Link href="/destinations" className="hover:underline">
+                <Link href="/destinations" className="hover:underline hover:text-neutral-200">
                   Destinations
                 </Link>
               </li>
               <li>
-                <Link href="/pickup-points" className="hover:underline">
+                <Link href="/pickup-points" className="hover:underline hover:text-neutral-200">
                   Pickup Points
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
+                <Link href="#" className="hover:underline hover:text-neutral-200">
                   Private Yacht Charters
                 </Link>
               </li>
               <li>
-                <Link href="/blogs" className="hover:underline">
+                <Link href="/blogs" className="hover:underline hover:text-neutral-200">
                   Blog
                 </Link>
               </li>
@@ -199,10 +199,10 @@ export default function Footer() {
 
           {/* Book Online section */}
           <div className="mt-8 md:mt-0">
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+            <h3 className="text-xl text-white font-semibold mb-6 text-center md:text-left">
               Book Online
             </h3>
-            <p className="mb-6 text-center md:text-left">
+            <p className="mb-6 text-center md:text-left text-white">
               Select our sea cruises for stunning views, luxury amenities, and
               personalized itineraries.*
             </p>
@@ -249,10 +249,10 @@ export default function Footer() {
             
           </div>
           <div className="flex gap-4">
-            <Link href="#" className="hover:underline">
+            <Link href="/privacy-policy" className="hover:underline hover:text-neutral-200">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:underline">
+            <Link href="/terms-conditions" className="hover:underline hover:text-neutral-200">
               Terms & Conditions
             </Link>
           </div>
