@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -22,11 +22,11 @@ export default function CruiseHero() {
          y: 0,
          transition: { duration: 0.5 },
        }}
-        className={`absolute inset-0 w-full  bg-cover bg-center transition-transform duration-[2s] ease-out ${
+        className={`absolute inset-0 w-full bg-center bg-cover  transition-transform duration-[2s] ease-out ${
           isLoaded ? "translate-y-0" : "translate-y-[10%]"
         }`}
         style={{
-          backgroundImage: "url(/images/ship-image.png)",
+          backgroundImage: "url(/mobile-header.jpg)",
           transformOrigin: "bottom center",
         }}
       />
@@ -46,7 +46,7 @@ export default function CruiseHero() {
                 x: 15,
                 transition: { duration: 0.9 },
               }}
-              className="text-white font-script text-xl mb-2 italic"
+              className="text-white font-script text-xl mb-2 mt-4 italic"
             >
               Luxury Cruising
             </motion.p>
@@ -66,7 +66,7 @@ export default function CruiseHero() {
               Cyprus
             </motion.h1>
 
-            <motion.button
+            {/* <motion.button
               initial={{ opacity: 0, y:40 , x:0}}
               whileInView={{
                 opacity: 1,
@@ -76,13 +76,13 @@ export default function CruiseHero() {
               }}
             >
               <Link
-                href="#tours"
+                href="/tours"
                 className="inline-flex items-center bg-[#0099cc] text-white px-6 py-3 rounded-md font-medium hover:bg-[#0088bb] transition-colors"
               >
                 Explore Tours Now
                 <span className="ml-2">→</span>
               </Link>
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
 

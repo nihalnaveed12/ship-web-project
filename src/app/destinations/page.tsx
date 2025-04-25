@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { destinations } from "@/data/destinations";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Destinations - Paphos Sea Cruises",
@@ -13,26 +13,7 @@ export const metadata: Metadata = {
 
 
 
-const destinations = [
-  {
-    title: "Blue Lagoon - Akamas",
-    desc: "Blue Lagoon offers a unique perspective of the beautiful landscape that defines the region.",
-    src: "/destination-img/destination.jpeg",
-    href: "/destinations/blue-lagoon-akamas",
-  },
-  {
-    title: "Peyia Destinations",
-    desc: "Uncover the Mysteries: Sea Caves Adventure in Peyia, St. George’s Island and the crystal-clear waters of Coral Bay. Learn More",
-    src: "/destination-img/dest3.jpg",
-    href: "/destinations/peyia-destinations",
-  },
-  {
-    title: "Rikkos Bay",
-    desc: "Explore Rikkos Bay, a perfect blend of natural beauty, relaxation, and water activities.",
-    src: "/destination-img/dest2.jpg",
-    href: "/destinations/rikkos-bay",
-  },
-];
+
 
 export default function Destinations() {
   return (

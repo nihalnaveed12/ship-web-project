@@ -185,7 +185,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline hover:text-neutral-200">
+                <Link href="http://cyprusyachtcharters.com/" target="_blank" className="hover:underline hover:text-neutral-200">
                   Private Yacht Charters
                 </Link>
               </li>

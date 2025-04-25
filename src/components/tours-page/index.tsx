@@ -24,7 +24,7 @@ export default function ToursCards() {
   });
 
   return (
-    <div className="grid lg:grid-cols-3 max-w-6xl mx-auto sm:grid-cols-2 px-4 gap-y-8 py-16 gap-x-8 ">
+    <div className="grid xl:grid-cols-3 place-items-center max-w-7xl mx-auto md:grid-cols-2 px-4 gap-y-8 py-16 gap-x-8 ">
       {filteredTours.map((tours, index) => (
         <TourCard
           key={index}

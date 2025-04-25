@@ -24,7 +24,7 @@ export default function Gallery() {
         {/* Tours Title */}
         <div className="absolute inset-0 flex items-center justify-start px-8 sm:px-16 md:px-24 lg:px-32">
           <h1 className="text-white text-4xl md:text-6xl font-sans font-bold">
-            FAQ
+            Gallery
           </h1>
         </div>
       </div>
