@@ -100,25 +100,25 @@ export default function Footer() {
             <p className="mb-2">Follow us</p>
             <div className="flex gap-2">
               <Link
-                href="#"
+                href="https://www.facebook.com/paphosseacruises"
                 className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
               >
                 <Facebook size={20} className="text-[#1e3163]" />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/paphosseacruises/"
                 className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
               >
                 <Instagram size={20} className="text-[#1e3163]" />
               </Link>
               <Link
-                href="#"
+                href="mailto:info@paphosseacruises.com"
                 className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
               >
                 <Mail size={20} className="text-[#1e3163]" />
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/channel/UCTgBtpv9xGdEY4RnFHaNBCw"
                 className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
               >
                 <Youtube size={20} className="text-[#1e3163]" />

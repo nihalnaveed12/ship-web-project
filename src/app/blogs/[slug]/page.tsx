@@ -28,7 +28,7 @@ export default async function BlogsDetails({
 
         {/* Tours Title */}
       </div>
-      <div className="max-w-7xl mx-auto px-4 flex gap-10 font-sans">
+      <div className="max-w-7xl mx-auto px-4 flex md:flex-row flex-col gap-10 font-sans">
         <div className="md:w-[65%] flex flex-col gap-4 ">
           <BlogHeader title={blog.title} img={blog.img} />
           <BlogContent content={blog.content} />

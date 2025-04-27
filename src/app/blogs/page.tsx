@@ -67,7 +67,7 @@ export default function BlogsPage() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 max-w-6xl mx-auto px-4  gap-x-8 gap-y-16 pb-12">
+      <div className="grid sm:grid-cols-2  max-w-6xl mx-auto px-4  gap-x-8 gap-y-16 pb-12">
         {blogPosts.map((blog, index) => (
           <Link  href={`/blogs/${blog.slug}`} className="flex flex-col gap-3 shadow-md pb-4 " key={index}>
             <div className="overflow-hidden  aspect-video  rounded-[20px] relative">
