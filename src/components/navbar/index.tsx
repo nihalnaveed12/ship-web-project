@@ -62,7 +62,10 @@ export default function Navbar() {
         </div>
 
         <div className="flex  gap-2">
-          <Link href={"/tours"}>
+          <Link href={"https://www.paphosseacruises.com/bookings/index.php?ln=en&showAgencyCode=no&_gl=1*19twobi*_gcl_au*NjA1NzYyODE3LjE3NDIxMTkwMDQ"}
+          target="_blank"
+          >
+
             <Button className="bg-[#0A71B8] px-3 sm:px-4  py-2 h-auto text-sm sm:text-base hover:bg-[#0A71a8] cursor-pointer">
               Book Now
             </Button>

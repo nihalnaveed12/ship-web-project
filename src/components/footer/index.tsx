@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Mail, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, Ship, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -112,10 +112,11 @@ export default function Footer() {
                 <Instagram size={20} className="text-[#1e3163]" />
               </Link>
               <Link
-                href="mailto:info@paphosseacruises.com"
+                href="https://www.tripadvisor.com/Attraction_Review-g190384-d2285337-Reviews-Paphos_Sea_Cruises-Paphos_Paphos_District.html"
                 className="bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+                target="_blank"
               >
-                <Mail size={20} className="text-[#1e3163]" />
+                <Ship  size={20} className="text-[#1e3163]" />
               </Link>
               <Link
                 href="https://www.youtube.com/channel/UCTgBtpv9xGdEY4RnFHaNBCw"
