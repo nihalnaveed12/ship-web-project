@@ -68,9 +68,6 @@ export default function AboutUs() {
             />
           </div>
           <div className="lg:w-[40%] flex flex-col gap-6 ">
-            <p className="font-serif italic text-xl text-[#0A71B8]">
-              Paphos Sea Cruises
-            </p>
             <h1 className="font-sans text-5xl font-bold">
               The best day & Night Cruises in Cyprus
             </h1>
@@ -82,8 +79,8 @@ export default function AboutUs() {
               Charters, Special Events, and Water Sports.
             </p>
             <p className="font-sans text-[14px] text-zinc-600">
-              Paphos Sea Cruises is a family owned business founded back in
-              1983. With a reputation for being experienced, reliable,
+              
+              With a reputation for being experienced, reliable,
               methodical and passionate, we have been trusted by more than a
               million customers during all those years. Teamwork is a core
               tenant of our work, and such we offer pleasant and quality cruises

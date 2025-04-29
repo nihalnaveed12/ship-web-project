@@ -80,7 +80,7 @@ export default function PopularToursCarousel() {
         >
           <CarouselContent className="py-8 mx-auto ">
             {ToursData.map((tours, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2  flex items-center justify-center  lg:basis-1/3">
                 <TourCard
                   image={tours.image}
                   adutlFee={tours.adultFee}
@@ -93,10 +93,10 @@ export default function PopularToursCarousel() {
             ))}
           </CarouselContent>
           <CarouselPrevious
-            className="left-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer mr-2"
+            className="left-10 sm:left-0 top-0 sm:top-[50%] hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer mr-2"
             size="icon"
           />
-          <CarouselNext className="right-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 cursor-pointer " />
+          <CarouselNext className="right-10 sm:right-0 hover:bg-[#0A71B8] hover:text-white w-10 h-10 top-0 sm:top-[50%]  cursor-pointer " />
         </Carousel>
 
         <div className="flex justify-center gap-2 mt-6 ">

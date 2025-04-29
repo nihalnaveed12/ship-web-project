@@ -14,7 +14,7 @@ type propTypes = {
 
 export default function TourCard(prop: propTypes) {
   return (
-    <div className="max-w-92 sm:min-w-92  bg-white rounded-[20px] shadow-md overflow-hidden">
+    <div className="w-90 bg-white rounded-[20px] shadow-md overflow-hidden">
       {/* Card Image */}
       <Link
         href={prop.href}

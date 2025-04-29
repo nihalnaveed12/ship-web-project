@@ -10,7 +10,14 @@ const faqData = [
   {
     id: "item-1",
     question: "Can I arrange a cruise booking for longer than one month?",
-    answer:"Yes, please follow these steps:  1. Navigate to paphosseacruises.com  click the Book Now button. 2. You will see search tours: For the start date, please specify the exact date you would like to book, for example, August 20. The end date can be the same as the start date if you need a specific date, or you can leave it as default to search for a one-month period. 3. Please click the “Perform Tour Search” button. 4. Scroll down until you find your desired cruise or use the next page if needed. 5. Click the “Book It” button. You should be able to proceed with your booking."
+    answer:"Yes, please follow these steps:",
+    points: [
+      "1. Navigate to paphosseacruises.com  click the Book Now button.",
+      "2. You will see search tours: For the start date, please specify the exact date you would like to book, for example, August 20. The end date can be the same as the start date if you need a specific date, or you can leave it as default to search for a one-month period.",
+      "3. Please click the “Perform Tour Search” button.",
+      "4. Scroll down until you find your desired cruise or use the next page if needed.",
+      "5. Click the “Book It” button. You should be able to proceed with your booking.",
+    ],
   },
   {
     id: "item-2",
@@ -170,6 +177,11 @@ export default function FindAnswersSection() {
                   <div className="pt-2 pb-4 text-gray-700">
                     <p>{item.answer}</p>
                   </div>
+                  <ul className="list-disc pl-6 text-gray-700">
+                    {item.points && item.points.map((point, index) => (
+                      <li key={index} className="py-1 list-none">{point}</li>
+                    ))}
+                    </ul>
                 </div>
               </div>
             </div>

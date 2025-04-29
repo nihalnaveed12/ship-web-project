@@ -52,13 +52,13 @@ export default function ContactForm() {
           </div>
           <div className="flex gap-4 py-4">
             <PhoneCall color="#0A71B8" />
-            <h2>+94 324 558 45</h2>
+            <h2>+357 26910200</h2>
           </div>
           <div className="flex gap-4 py-4">
             <Mail color="#0A71B8" />
             <div className="flex flex-col gap-2">
               <h2>Email</h2>
-              <p className="text-[#0A71B8]">nihalnaveed@gamil.com</p>
+              <p className="text-[#0A71B8]">info@paphosseacruises.com</p>
             </div>
           </div>
           <div className="flex gap-4 py-4">
@@ -92,7 +92,7 @@ export default function ContactForm() {
             </svg>
             <div className=" text-[15px] flex flex-col gap-2">
               <h2 className="font-sans">Get Support Service</h2>
-              <p className="text-zinc-400">WhatsApp: 99459455</p>
+              <p className="text-zinc-400">WhatsApp: +357 99459455</p>
             </div>
           </div>
         </div>

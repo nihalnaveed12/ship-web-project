@@ -6,7 +6,7 @@ import { Search } from "lucide-react";
 export default function SearchBar() {
   const router = useRouter();
 
-  const Destinations = ["ALL Destination", "Blue Lagoon Latchi", "Paphos"];
+  const Destinations = ["ALL Destination", "Blue Lagoon Latchi", "Paphos", "Protaras"];
   const cruiseTimeLines = ["All Cruise Timelines", "Day", "Afternoon", "Evening"];
   const CruiseType = [
     "All Cruise Types",
