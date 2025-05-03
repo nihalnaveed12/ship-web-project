@@ -15,7 +15,8 @@ export default function Navbar() {
     },
     {
       name: "Tours",
-      href: "/tours",
+      href: "https://www.paphosseacruises.com/bookings/index.php?ln=en&showAgencyCode=no&_gl=1*19twobi*_gcl_au*NjA1NzYyODE3LjE3NDIxMTkwMDQ",
+      
     },
     {
       name: "Destination",
@@ -91,6 +92,7 @@ export default function Navbar() {
                   <Link
                     href={nav.href}
                     key={index}
+                    
                     className="hover:text-[#0A71B8] font-sans text-[18px]"
                   >
                     {nav.name}
