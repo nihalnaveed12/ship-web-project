@@ -1,5 +1,5 @@
 export type ContentBlock = {
-  type: "paragraph" | "heading";
+  type: "paragraph" | "heading" | "paragraph-1";
   value: string;
 };
 
@@ -18,7 +18,7 @@ export const Blogs:BlogType[] = [
     slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
     content: [
       {
-        type: "paragraph",
+        type: "paragraph-1",
         value:
           "With its mild winters and hot summers, a visit to Cyprus is always a good idea, no matter the time of year. Here’s a detailed guide month by month to help you maximize your visit and enjoy Cyprus’s beautiful Mediterranean climate.",
       },
@@ -107,7 +107,7 @@ export const Blogs:BlogType[] = [
     slug: "approval-granted-for-new-marina-and-cruise-ship-dock-in-paphos",
     content: [
       {
-        type: "paragraph",
+        type: "paragraph-1",
         value:
           "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by Tourism Minister Savvas Perdios. This development, which includes a hotel, marina, and a pier for luxury cruise ships, has been a goal of the Deputy Ministry for four years.",
       },
@@ -148,7 +148,7 @@ export const Blogs:BlogType[] = [
     slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
     content: [
       {
-        type: "paragraph",
+        type: "paragraph-1",
         value:
           "The Mediterranean is an attractive area comprising approximately 20 countries in Southern Europe and North Africa, bordered by the Mediterranean Sea with Cyprus being an island belonging to one of those countries.",
       },
@@ -186,7 +186,7 @@ export const Blogs:BlogType[] = [
     img: "/blogs/blogs3.jpg",
     content: [
       {
-        type: "paragraph",
+        type: "paragraph-1",
         value:
           "Anticipate an abundance of love and beauty in the birthplace of Aphrodite and indulge in the top activities in Paphos.",
       },

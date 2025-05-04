@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import { Blogs } from "@/data/blog";
 
 export const metadata: Metadata ={
   title: "Blogs - Paphos Sea Cruises",
@@ -8,44 +9,44 @@ export const metadata: Metadata ={
   keywords: "blogs, articles, Paphos, Cyprus, cruise tips, travel advice",
 }
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Best Months to Cruise in Cyprus: A Year-Round Guide",
-    content:
-      "The Mediterranean is an attractive area comprising approximately 20 countries in Southern Europe and North Africa, bordered by...",
-    image: "/blogs/blog1.jpg",
-    slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
-    category: "BLOG",
-  },
-  {
-    id: 2,
-    title: "Approval Granted for New Marina and Cruise Ship Dock in Paphos",
-    content:
-      "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by...",
-    image: "/blogs/blogs1.jpg",
-    slug: "approval-granted-for-new-marina-and-cruise-ship-dock-in-paphos",
-    category: "BLOG",
-  },
-  {
-    id: 3,
-    slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
-    title: "Top 10 Mediterranean Cruise Destinations",
-    content:
-      "Discover the most beautiful ports and islands that make Mediterranean cruises so popular among travelers seeking...",
-    image: "/blogs/blogs3.jpg",
-    category: "BLOG",
-  },
-  {
-    id: 4,
-    title: "Cruise Ship Safety Protocols: What You Need to Know",
-     slug: "our-11-suggested-things-to-do-while-in-paphos",    
-     content:
-      "Modern cruise ships implement rigorous safety measures to ensure passenger wellbeing. From emergency drills to...",
-    image: "/blogs/blogs4.jpg",
-    category: "BLOG",
-  },
-];
+// const blogPosts = [
+//   {
+//     id: 1,
+//     title: "Best Months to Cruise in Cyprus: A Year-Round Guide",
+//     content:
+//       "The Mediterranean is an attractive area comprising approximately 20 countries in Southern Europe and North Africa, bordered by...",
+//     image: "/blogs/blog1.jpg",
+//     slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
+//     category: "BLOG",
+//   },
+//   {
+//     id: 2,
+//     title: "Approval Granted for New Marina and Cruise Ship Dock in Paphos",
+//     content:
+//       "The Cabinet has given approval for a new marina and cruise ship pier in Paphos, as announced by...",
+//     image: "/blogs/blogs1.jpg",
+//     slug: "approval-granted-for-new-marina-and-cruise-ship-dock-in-paphos",
+//     category: "BLOG",
+//   },
+//   {
+//     id: 3,
+//     slug: "best-months-to-cruise-in-cyprus-a-year-round-guide",
+//     title: "Top 10 Mediterranean Cruise Destinations",
+//     content:
+//       "Discover the most beautiful ports and islands that make Mediterranean cruises so popular among travelers seeking...",
+//     image: "/blogs/blogs3.jpg",
+//     category: "BLOG",
+//   },
+//   {
+//     id: 4,
+//     title: "Cruise Ship Safety Protocols: What You Need to Know",
+//      slug: "our-11-suggested-things-to-do-while-in-paphos",    
+//      content:
+//       "Modern cruise ships implement rigorous safety measures to ensure passenger wellbeing. From emergency drills to...",
+//     image: "/blogs/blogs4.jpg",
+//     category: "BLOG",
+//   },
+// ];
 
 export default function BlogsPage() {
   return (
@@ -68,11 +69,11 @@ export default function BlogsPage() {
       </div>
 
       <div className="grid sm:grid-cols-2  max-w-6xl mx-auto px-4  gap-x-8 gap-y-16 pb-12">
-        {blogPosts.map((blog, index) => (
+        {Blogs.map((blog, index) => (
           <Link  href={`/blogs/${blog.slug}`} className="flex flex-col gap-3 shadow-md pb-4 " key={index}>
             <div className="overflow-hidden  aspect-video  rounded-[20px] relative">
               <Image
-                src={blog.image}
+                src={blog.img}
                 height={1000}
                 width={1000}
                 alt={blog.title}
@@ -87,7 +88,15 @@ export default function BlogsPage() {
                 {blog.title}
               </h1>
               <p className="text-[10px] font-sans text-zinc-500 mx-2">
-                {blog.content}
+               {blog.content.map((content , index) => (
+                <div className="" key={index}>
+                    {content.type === "paragraph-1" ? (
+                      <p>{content.value}</p>
+                    ) : (
+                      <div className=""></div>
+                    )} 
+                </div>
+               ))}
               </p>
             
           </Link>

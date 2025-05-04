@@ -92,7 +92,7 @@ export default function CruiseHero() {
       ))}
 
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+      <div className="absolute inset-0 bg-black/35 z-[1]"></div>
 
       {/* Content Container */}
       <div className="relative z-10  flex flex-col justify-between font-sans">
