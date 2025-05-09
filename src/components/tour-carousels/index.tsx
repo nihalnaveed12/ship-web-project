@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Tours } from "@/data/tours";
-import Image from "next/image";
+
 import { useEffect, useState } from "react";
 
 export default function ToursCarousels() {
@@ -51,7 +51,7 @@ export default function ToursCarousels() {
         </div>
         {Tours.map((tours, index) => (
           <CarouselItem key={index} className="md:basis-1/2 basis-full lg:basis-1/3">
-            <Image
+            <img
               src={tours.image}
               alt={tours.title}
               height={1000}

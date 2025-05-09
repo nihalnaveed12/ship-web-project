@@ -3,17 +3,23 @@ import ToursCarousels from "@/components/tour-carousels";
 import { Button } from "@/components/ui/button";
 import { Tours } from "@/data/tours";
 import { CalendarDays, Clock, Euro, Route } from "lucide-react";
-import Image from "next/image";
+
 import Link from "next/link";
 
 
 
+export async function generateStaticParams() {
+  return Tours.map((tour) => ({
+    slug: tour.slug.replace("/tours/", ""),
+  }));
+}
+
 export default async function TourDetails({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
   const tour = Tours.find((tour) => tour.slug === slug);
   if (!tour) {
     return <div>Tour not found</div>;
@@ -73,7 +79,7 @@ export default async function TourDetails({
           </div>
 
           <div className="flex flex-col gap-8 sm:w-[35%] w-full">
-            <Image
+            <img
               src={"/icons-tours.png"}
               alt="all inclusive"
               height={1000}
@@ -152,7 +158,7 @@ export default async function TourDetails({
         </div>
 
         <div className="pt-16">
-          <Image
+          <img
             src={"/paphos-cruises.png"}
             alt="paphos cruise map picture"
             height={1000}

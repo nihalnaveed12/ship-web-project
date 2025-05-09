@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { Facebook, Instagram, Mail, Ship, Youtube } from "lucide-react";
 
 export default function Footer() {
@@ -80,7 +80,7 @@ export default function Footer() {
           {/* Navi section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="mb-4 relative">
-              <Image
+              <img
                 src="/images/Asset-02.png"
                 alt="Navi mascot"
                 width={120}
@@ -216,21 +216,21 @@ export default function Footer() {
               </Link>
             </div>
             <div className="flex justify-center md:justify-start gap-2">
-              <Image
+              <img
                 src="/images/visa.png"
                 alt="Visa"
                 width={60}
                 height={40}
                 className="bg-white aspect-square rounded"
               />
-              <Image
+              <img
                 src="/images/paypal.png"
                 alt="Mastercard"
                 width={60}
                 height={40}
                 className="bg-white p-1 rounded"
               />
-              <Image
+              <img
                 src="/images/card.png"
                 alt="PayPal"
                 width={60}

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import {motion} from "framer-motion"
 export default function WhyChoose() {
   const items = [
@@ -53,7 +53,7 @@ export default function WhyChoose() {
         {items.map((item, index) => (
           <div className="flex flex-col gap-6" key={index}>
             <div className="bg-zinc-50 w-[30%] mx-auto  rounded-full ">
-              <Image
+              <img
                 src={item.icon}
                 alt={item.title}
                 width={1000}

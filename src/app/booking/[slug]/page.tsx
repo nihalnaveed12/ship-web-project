@@ -1,20 +1,25 @@
 import TourBookingForm from "@/components/book-now/form";
 import { Tours } from "@/data/tours";
 
-
-
-
+// Static generation ke liye params
+export async function generateStaticParams() {
+  return Tours.map((tour) => ({
+    slug: tour.slug,
+  }));
+}
 
 export default async function TourDetails({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
+
   const tour = Tours.find((tour) => tour.slug === slug);
   if (!tour) {
     return <div>Tour not found</div>;
   }
+
   return (
     <div className="pt-16 ">
       <div className="bg-zinc-100 ">
@@ -23,9 +28,12 @@ export default async function TourDetails({
           <h2 className="">{tour.destination}</h2>
         </div>
       </div>
-      <div className="">
-        <TourBookingForm adultFee={tour.adultFee} childFee={tour.childFee} slug={tour.slug}/>
-        
+      <div>
+        <TourBookingForm
+          adultFee={tour.adultFee}
+          childFee={tour.childFee}
+          slug={tour.slug}
+        />
       </div>
     </div>
   );

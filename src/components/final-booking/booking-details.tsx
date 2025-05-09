@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { CalendarIcon, Clock, MapPin } from "lucide-react";
 
 type BookingDetailsProps = {
@@ -18,11 +18,11 @@ export default function BookingDetails({ image , name , location  , duration , t
       <div className="p-6 pb-4">
         <h1 className="text-2xl font-bold mb-4">Booking Details</h1>
         <div className="relative w-full h-48 mb-4">
-          <Image
+          <img
             src={image}
             alt="Ocean Vision Show"
-            fill
-            className="object-cover rounded-md"
+            
+            className="object-cover rounded-md  h-48"
           />
         </div>
 

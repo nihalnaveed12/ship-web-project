@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -67,12 +67,12 @@ export default function Places() {
                     hoveredCard === destination.id ? "scale(1.05)" : "scale(1)",
                 }}
               >
-                <Image
+                <img
                   src={destination.image || "/placeholder.svg"}
                   alt={destination.name}
-                  fill
+                
                   className="object-cover"
-                  priority
+                  
                 />
               </div>
 

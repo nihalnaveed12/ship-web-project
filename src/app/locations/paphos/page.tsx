@@ -1,14 +1,14 @@
 import RecentPosts from "@/components/blogs/recent-posts";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Paphos - Paphos Sea Cruises",
-  description: "Explore the stunning Paphos with our exclusive tours. Experience the beauty of Cyprus like never before.",
+  description:
+    "Explore the stunning Paphos with our exclusive tours. Experience the beauty of Cyprus like never before.",
   keywords: "Paphos, Cyprus, tours, cruises, travel, adventure",
   authors: [{ name: "Paphos Sea Cruises" }],
-}
-
+};
 
 export default function Page() {
   type Locations = {
@@ -91,13 +91,11 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="relative h-[450px] ">
-        <Image
+      <div className="relative top-10 bottom-10 ">
+        <img
           src="/backgrounds/blue.jpg"
           alt="Blue wave background"
-          fill
-          className=""
-          priority
+          className="h-[400px] w-full mb-14"
         />
 
         {/* Tours Title */}
@@ -111,21 +109,24 @@ export default function Page() {
         <div className="md:w-[65%]  flex flex-col gap-10">
           {paphosLocations.map((location, index) => (
             <div className="flex flex-col gap-4" key={index}>
-              <Image
+              <img
                 src={location.img}
                 alt={location.name}
                 height={1000}
                 width={1000}
                 className="rounded-[12px]"
               />
-              <Link href={`/tours/${location.slug}`} className="text-3xl font-semibold font-sans">
+              <Link
+                href={`/tours/${location.slug}`}
+                className="text-3xl font-semibold font-sans"
+              >
                 {location.name}
               </Link>
               <div className="text-[14px] font-sans flex flex-col gap-3 text-zinc-500">
-               <p>{location.para1}</p>
-               <p>{location.para2}</p>
-               <p>{location.para3}</p>
-              </div>              
+                <p>{location.para1}</p>
+                <p>{location.para2}</p>
+                <p>{location.para3}</p>
+              </div>
             </div>
           ))}
         </div>

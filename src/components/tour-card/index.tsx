@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Clock, Users } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -16,18 +15,13 @@ export default function TourCard(prop: propTypes) {
   return (
     <div className="w-90 bg-white rounded-[20px] shadow-md overflow-hidden">
       {/* Card Image */}
-      <Link
-        href={prop.href}
-        className=""
-      >
+      <Link href={prop.href} className="">
         <div className="relative overflow-hidden h-[250px]  rounded-[20px] ">
-
-        <Image
-          src={prop.image}
-          alt="Luxury yacht on Blue Lagoon Afternoon tour"
-          fill
-          className="transition-transform hover:scale-110 duration-500 object-cover relative cursor-pointer"
-        />
+          <img
+            src={prop.image}
+            alt="Luxury yacht on Blue Lagoon Afternoon tour"
+            className="transition-transform hover:scale-110 duration-500 object-cover relative cursor-pointer rounded-[12px]"
+          />
         </div>
       </Link>
 

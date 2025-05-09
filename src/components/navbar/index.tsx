@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
@@ -45,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto md:px-0 h-16 flex items-center justify-between">
         <div className="flex gap-4 md:gap-8 items-center">
           <Link href={"/"}>
-            <Image
+            <img
               src={"/images/logo.png"}
               height={1000}
               width={1000}

@@ -6,10 +6,16 @@ import { Tours } from "@/data/tours";
 
 
 
-export default async function FinalBooking({
+export async function generateStaticParams() {
+  return Tours.map((tour) => ({
+    slug: tour.slug,
+  }));
+}
+
+export default async function TourDetails({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
   const { slug } = await params;
   const tour = Tours.find((tour) => tour.slug === slug);

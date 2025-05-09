@@ -1,5 +1,3 @@
-
-import Image from "next/image";
 import Link from "next/link";
 import { destinations } from "@/data/destinations";
 import { Metadata } from "next";
@@ -18,13 +16,11 @@ export const metadata: Metadata = {
 export default function Destinations() {
   return (
     <div className="">
-      <div className="relative h-[450px] ">
-        <Image
+      <div className="relative top-10 bottom-10 ">
+        <img
           src="/backgrounds/blue.jpg"
           alt="Blue wave background"
-          fill
-          className=""
-          priority
+          className="h-[400px] w-full mb-14"
         />
 
         {/* Tours Title */}
@@ -49,7 +45,7 @@ export default function Destinations() {
         <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] mx-auto pt-10 gap-7">
           {destinations.map((dest, index) => (
             <div className="flex flex-col gap-2 mb-4 " key={index}>
-              <Image
+              <img
                 src={dest.src}
                 alt={dest.title}
                 height={1000}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SearchBar from "@/components/search-bar";
 import ToursCards from "@/components/tours-page";
 import { Suspense } from "react";
@@ -17,13 +16,11 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="relative">
         {/* Background Image */}
-        <div className="relative h-[450px] ">
-          <Image
+        <div className="relative top-10 bottom-10 ">
+          <img
             src="/backgrounds/blue.jpg"
             alt="Blue wave background"
-            fill
-            className=""
-            priority
+            className="h-[400px] w-full mb-14"
           />
 
           {/* Tours Title */}

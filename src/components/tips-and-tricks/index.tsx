@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
+
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -105,7 +105,7 @@ export default function BlogCarousel() {
                 <Card className="border-none shadow-none">
                   <CardContent className="p-0 flex gap-4">
                     <div className="relative">
-                      <Image
+                      <img
                         src={post.image || "/placeholder.svg"}
                         alt={post.title}
                         width={500}

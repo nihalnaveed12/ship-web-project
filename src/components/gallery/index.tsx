@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import { useState } from "react";
 
 export default function Galleri() {
@@ -104,7 +104,7 @@ export default function Galleri() {
     <div className="">
       <div className="grid grid-cols-4 pb-10 gap-4">
         {images.map((img, index) => (
-          <Image
+          <img
             key={index}
             src={img.src}
             alt="Paphos Sea Cruise Images"
@@ -130,7 +130,7 @@ export default function Galleri() {
           >
             &#8592;
           </button>
-          <Image
+          <img
             src={images[selectedImageIndex].src}
             className="max-h-[90%] max-w-[90%]"
             alt="Paphos Sea"

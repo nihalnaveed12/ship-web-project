@@ -1,5 +1,5 @@
 import { Blogs } from "@/data/blog";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export default function RecentPosts() {
@@ -10,7 +10,7 @@ export default function RecentPosts() {
 
       {Blogs.map((blog, index) => (
         <Link href={`/blogs/${blog.slug}`} className="flex gap-4 items-center" key={index}>
-          <Image
+          <img
             src={blog.img}
             alt={blog.title}
             height={1000}

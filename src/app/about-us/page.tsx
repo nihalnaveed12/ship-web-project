@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us - Paphos Sea Cruises",
@@ -9,13 +8,11 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div className="">
-      <div className="relative h-[450px] ">
-        <Image
+      <div className="relative top-10 bottom-10 ">
+        <img
           src="/backgrounds/blue.jpg"
           alt="Blue wave background"
-          fill
-          className=""
-          priority
+          className="h-[400px] w-full"
         />
 
         {/* Tours Title */}
@@ -51,7 +48,7 @@ export default function AboutUs() {
         <div className="flex  lg:flex-row flex-col-reverse  gap-8 max-w-5xl mx-auto px-6">
           <div className="lg:w-[50%] relative">
             <div className="">
-              <Image
+              <img
                 src={"/about.png"}
                 alt="About Us"
                 height={1000}
@@ -59,7 +56,7 @@ export default function AboutUs() {
                 className="relative "
               />
             </div>
-            <Image
+            <img
               src={"/about1.png"}
               alt="About Us"
               height={1000}
@@ -79,13 +76,12 @@ export default function AboutUs() {
               Charters, Special Events, and Water Sports.
             </p>
             <p className="font-sans text-[14px] text-zinc-600">
-              
-              With a reputation for being experienced, reliable,
-              methodical and passionate, we have been trusted by more than a
-              million customers during all those years. Teamwork is a core
-              tenant of our work, and such we offer pleasant and quality cruises
-              around Cyprus. Feel free to explore our services and welcome
-              aboard to discover the beauties of Cyprus.
+              With a reputation for being experienced, reliable, methodical and
+              passionate, we have been trusted by more than a million customers
+              during all those years. Teamwork is a core tenant of our work, and
+              such we offer pleasant and quality cruises around Cyprus. Feel
+              free to explore our services and welcome aboard to discover the
+              beauties of Cyprus.
             </p>
           </div>
         </div>

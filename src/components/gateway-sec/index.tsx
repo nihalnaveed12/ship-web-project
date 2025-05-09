@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -41,7 +40,7 @@ export default function GatewaySec() {
           href={"/destinations/blue-lagoon-akamas"}
           className="overflow-hidden  rounded-[20px] relative"
         >
-          <Image
+          <img
             src={"/images/gateway1.jpg"}
             alt="Paphos Sea"
             height={1000}
@@ -56,7 +55,7 @@ export default function GatewaySec() {
           href={"/destinations/peyia-destination"}
           className="overflow-hidden border  rounded-[20px] relative"
         >
-          <Image
+          <img
             src={"/images/gateway2.jpg"}
             alt="Paphos Sea"
             height={1000}
